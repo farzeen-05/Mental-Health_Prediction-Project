@@ -109,7 +109,7 @@ def login():
         cursor.execute("SELECT * FROM users WHERE email =%s" ,(email,))
         user=cursor.fetchone()
         cursor.close()
-        cursor.close()
+        conn.close()
 
         if user and check_password_hash (user['password'],password):
             session['user_id']=user['u_id']
