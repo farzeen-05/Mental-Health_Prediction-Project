@@ -22,14 +22,20 @@ app.secret_key = '9945'
 
 #Database connection
 def get_db_connection():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="mental_db",
-        port=3306
-    )
+    url = os.getenv("DATABASE_URL")
 
+    # split the URL
+    import urllib.parse as urlparse
+    urlparse.uses_netloc.append("mysql")
+    parsed = urlparse.urlparse(url)
+
+    return mysql.connector.connect(
+        host=parsed.hostname,
+        user=parsed.username,
+        password=parsed.password,
+        database=parsed.path.lstrip('/'),
+        port=parsed.port
+    )
 @app.route('/')
 @app.route('/index')
 def index():
