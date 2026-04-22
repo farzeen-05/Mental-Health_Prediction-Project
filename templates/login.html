@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block body %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <h1 class="display-3 mb-3 animated slideInDown">User Login</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a class="text-body" href="/index">Home</a></li>
+                <li class="breadcrumb-item text-dark active">Login</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Login Section -->
+<div class="container-xxl py-6">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>Login to AsthmaCare AI</h2>
+            <p>Access your account to use the asthma prediction system</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}  
+                <form action="/login" method="POST">
+                
+                    <!-- Email -->
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" name="email" required>
+                        <label>Email Address</label>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-floating mb-3 position-relative">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                        <label>Password</label>
+
+                        <span onclick="togglePassword()" 
+                              style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer;">
+                            <i class="fa fa-eye" id="eyeIcon"></i>
+                        </span>
+                    </div>
+
+                    <!-- Login Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary py-3 px-5">
+                            Login
+                        </button>
+                    </div>
+
+                    <!-- Register Link -->
+                    <div class="text-center mt-3">
+                        <p>Don't have an account? 
+                            <a href="/register">Register Here</a>
+                        </p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script>
+function togglePassword() {
+    const password = document.getElementById("password");
+    const icon = document.getElementById("eyeIcon");
+
+    if (password.type === "password") {
+        password.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+        password.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+    }
+}
+</script>
+
+{% endblock body %}
+<!-- Vendor JS Files -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/php-email-form/validate.js"></script>
+  <script src="/static/vendor/aos/aos.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

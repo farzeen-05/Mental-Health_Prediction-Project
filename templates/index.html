@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+{% block body %}
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          
+
+          <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
+            
+            <h2>Mental Health Prediction System</h2>
+            
+            <p>
+              Analyze your thoughts and emotions using AI to predict mental health conditions 
+              such as Anxiety, Depression, Stress, or Normal state.
+            </p>
+
+            <div class="d-flex mt-4 justify-content-center justify-content-md-start">
+              <a href="#prediction" class="download-btn">
+                <i class="bi bi-activity"></i> <span>Try Prediction</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+   <!-- About Section -->
+<section id="about" class="about section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-xl-center gy-5">
+
+      <div class="col-xl-5 content">
+        <h3>About Project</h3>
+        <h2>Mental Health Prediction Using Machine Learning</h2>
+        <p>
+          This project uses Natural Language Processing and Machine Learning to analyze user input text 
+          and predict mental health conditions such as Anxiety, Depression, Stress, or Normal state. 
+          It helps in early detection and awareness of mental well-being.
+        </p>
+        <a href="/predict" class="read-more"><span>Try Now</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="col-xl-7">
+        <div class="row gy-4 icon-boxes">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <i class="bi bi-robot"></i>
+              <h3>AI Based Prediction</h3>
+              <p>Uses machine learning models to classify mental health conditions from text input.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-chat-dots"></i>
+              <h3>Text Analysis</h3>
+              <p>Processes user thoughts and emotions using NLP techniques like tokenization and TF-IDF.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box">
+              <i class="bi bi-shield-check"></i>
+              <h3>Early Awareness</h3>
+              <p>Helps users understand their mental condition early for better care and support.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <i class="bi bi-graph-up-arrow"></i>
+              <h3>Accurate Results</h3>
+              <p>Trained models like SVM provide reliable predictions for mental health classification.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /About Section -->
+
+
+<!-- Featured Section -->
+<section id="featured" class="featured section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Why Use This System?</h2>
+    <p>Fast, simple and intelligent mental health analysis using AI</p>
+  </div>
+
+  <div class="container">
+
+    <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img">
+            <img src="/static/img/cards-4.png" alt="" class="img-fluid">
+            <div class="icon"><i class="bi bi-lightning"></i></div>
+          </div>
+          <h2 class="title">Instant Prediction</h2>
+          <p>
+            Get immediate results by simply entering your thoughts or feelings in text form.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card">
+          <div class="img">
+            <img src="/static/img/cards-2.png" alt="" class="img-fluid">
+            <div class="icon"><i class="bi bi-cpu"></i></div>
+          </div>
+          <h2 class="title">Machine Learning Powered</h2>
+          <p>
+            Uses trained models like SVM with TF-IDF vectorization for accurate classification.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card">
+          <div class="img">
+            <img src="/static/img/cards-6.png" alt="" class="img-fluid">
+            <div class="icon"><i class="bi bi-heart-pulse"></i></div>
+          </div>
+          <h2 class="title">Mental Health Awareness</h2>
+          <p>
+            Encourages users to understand and take care of their mental well-being.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Featured Section -->
+
+
+<!-- Cards Section -->
+<section id="cards" class="cards section">
+
+  <div class="container">
+
+    <div class="text-center mb-4 steps-img" data-aos="zoom-out">
+      <img src="/static/img/steps.svg" alt="">
+    </div>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-item">
+          <span>01</span>
+          <h4>Enter Your Thoughts</h4>
+          <p>Type your feelings or thoughts into the system.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-item">
+          <span>02</span>
+          <h4><a href="" class="stretched-link">AI Analysis</a></h4>
+          <p>The system processes your text using NLP techniques.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-item">
+          <span>03</span>
+          <h4><a href="" class="stretched-link">Get Prediction</a></h4>
+          <p>Receive your mental health classification instantly.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Cards Section -->
+
+
+<!-- Features Section -->
+<section id="features" class="features section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Key Features</h2>
+    <p>Advanced NLP and machine learning techniques for prediction</p>
+  </div>
+
+  <div class="container">
+
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-md-5 d-flex align-items-center">
+        <img src="/static/img/features-1.svg" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7">
+        <h3>Natural Language Processing</h3>
+        <p class="fst-italic">
+          Text is cleaned, tokenized, and processed for better understanding.
+        </p>
+        <ul>
+          <li><i class="bi bi-check"></i><span> Tokenization and stopword removal</span></li>
+          <li><i class="bi bi-check"></i><span> Lemmatization of words</span></li>
+          <li><i class="bi bi-check"></i><span> Clean text preprocessing</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-md-5 order-1 order-md-2 d-flex align-items-center">
+        <img src="/static/img/features-2.svg" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7 order-2 order-md-1">
+        <h3>TF-IDF Vectorization</h3>
+        <p class="fst-italic">
+          Converts text into numerical features for machine learning.
+        </p>
+        <p>
+          Helps the model identify important words and patterns in user input.
+        </p>
+      </div>
+    </div>
+
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-md-5 d-flex align-items-center">
+        <img src="/static/img/features-3.svg" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7">
+        <h3>Machine Learning Model</h3>
+        <p>
+          Uses Support Vector Machine (SVM) to classify mental health conditions accurately.
+        </p>
+        <ul>
+          <li><i class="bi bi-check"></i> <span>High accuracy classification</span></li>
+          <li><i class="bi bi-check"></i><span>Fast prediction</span></li>
+          <li><i class="bi bi-check"></i> <span>Reliable results</span></li>
+        </ul>
+      </div>
+    </div>
+
+<div class="row gy-4 align-items-center features-item">
+  <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+    <img src="/static/img/features-4.svg" class="img-fluid" alt="">
+  </div>
+
+  <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+    
+    <h3>Real-Time Mental Health Prediction</h3>
+    
+    <p class="fst-italic">
+      Get instant insights into your mental state by analyzing your text input using AI.
+    </p>
+    
+    <p>
+      The system processes user input in real-time using Natural Language Processing and 
+      machine learning models. It identifies patterns in language to classify mental health 
+      conditions such as Anxiety, Depression, Stress, or Normal, providing quick and helpful results.
+    </p>
+
+  </div>
+</div><!-- Features Item -->
+
+    </section><!-- /Features Section -->
+
+  
+    
+
+   <!-- Prediction Section -->
+<section id="prediction" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Mental Health Prediction</h2>
+    <p>Enter your thoughts and get your mental health status instantly</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-6">
+        <div class="pricing-item featured">
+
+          <h3>Enter Your Text</h3>
+
+          <form action="/predict" method="post">
+            
+            <div class="mb-3">
+              <textarea name="user_input" class="form-control" rows="4" placeholder="Type your feelings here..." required></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="buy-btn">Predict</button>
+            </div>
+
+          </form>
+
+          <!-- Output -->
+          {% if prediction %}
+          <div class="mt-4 text-center">
+            <h4>Prediction Result:</h4>
+            <p><strong>{{ prediction }}</strong></p>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Prediction Section -->
+
+  </main>
+
+  {% endblock body %}
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/php-email-form/validate.js"></script>
+  <script src="/static/vendor/aos/aos.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

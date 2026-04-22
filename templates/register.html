@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <h1 class="display-3 mb-3 animated slideInDown">User Registration</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a class="text-body" href="/index">Home</a></li>
+                <li class="breadcrumb-item text-dark active">Register</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Register Section -->
+<div class="container-xxl py-6">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>Create Account</h2>
+            <p>Register to access the Asthma Classification System</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+                <form action="/register" method="POST">
+
+                    <!-- Full Name -->
+                    <div class="form-floating mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" name="name" required>
+                        <label>Full Name</label>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" name="password" required>
+                        <label>Email Address</label>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-floating mb-3 position-relative">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                        <label>Password</label>
+
+                        <span onclick="togglePassword('password','eye1')" 
+                              style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer;">
+                            <i class="fa fa-eye" id="eye1"></i>
+                        </span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-floating mb-3 position-relative">
+                        <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password" required>
+                        <label>Confirm Password</label>
+
+                        <span onclick="togglePassword('confirm_password','eye2')" 
+                              style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer;">
+                            <i class="fa fa-eye" id="eye2"></i>
+                        </span>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary py-3 px-5">
+                            Register
+                        </button>
+                    </div>
+
+                    <!-- Login Link -->
+                    <div class="text-center mt-3">
+                        <p>Already have an account? 
+                            <a href="{{ url_for ( "login" )}}">Login Here</a>
+                        </p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script>
+function togglePassword(fieldId, iconId) {
+    const field = document.getElementById(fieldId);
+    const icon = document.getElementById(iconId);
+
+    if (field.type === "password") {
+        field.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+        field.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+    }
+}
+</script>
+
+{% endblock body %}
+<!-- Vendor JS Files -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/php-email-form/validate.js"></script>
+  <script src="/static/vendor/aos/aos.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>
