@@ -10,6 +10,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import nltk 
+import os
 nltk.download('punkt_tab')
 #save LR model
 model=joblib.load('svm1_model_nlp.pkl')
