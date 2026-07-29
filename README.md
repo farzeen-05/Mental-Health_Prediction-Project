@@ -254,5 +254,5 @@ This project was built for **educational and portfolio purposes** to demonstrate
 [![Email](https://img.shields.io/badge/Email-farzeen99453@gmail.com-EA4335?style=flat&logo=gmail)](mailto:farzeen99453@gmail.com)
 
 ## 📄 License
-
-This project currently has no explicit license. If you'd like to reuse or build on this work, please reach out to the repository owner, or add a license (e.g., MIT) to clarify usage terms.
+ 
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
