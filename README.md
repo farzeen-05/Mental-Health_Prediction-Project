@@ -1,8 +1,8 @@
 # 🧠 Mental Health Prediction System
 
-![Mental Health Prediction System Banner](https://img.shields.io/badge/ Mental Health Prediction System-AI%20Report%20Generator-1A4A8A?style=for-the-badge&logo=python&logoColor=white)
+![Mental Health Prediction System Banner](https://img.shields.io/badge/Mental-Health-Prediction-System-AI%20Report%20Generator-1A4A8A?style=for-the-badge&logo=python&logoColor=white)
  
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo- Mental Health Prediction System-1A4A8A?style=for-the-badge)](https://mental-health-prediction-project-fdbg.onrender.com/)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Mental-Health-Prediction-System-1A4A8A?style=for-the-badge)](https://mental-health-prediction-project-fdbg.onrender.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-farzeen--05-181717?style=for-the-badge&logo=github)](https://github.com/farzeen-05/Mental-Health_Prediction-Project.git)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
